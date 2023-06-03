@@ -62,7 +62,7 @@ train_last_rating = train_data['last_rating'].values
 train_ratings = train_data['rating'].values
 
 # Fit the model
-model.fit([train_user, train_movie, train_last_watched_movie, train_last_rating], train_ratings, epochs=100, batch_size=64)
+model.fit([train_user, train_movie, train_last_watched_movie, train_last_rating], train_ratings, epochs=10, batch_size=64)
 
-model.save('movie_recommendation_realtime.keras')
+model.save('movie_recommendation_realtime.h5')
 

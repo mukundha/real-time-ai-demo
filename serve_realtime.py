@@ -2,7 +2,7 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 NUM_MOVIES=9724
-model = load_model('recommendation_model.h5')
+model = load_model('movie_recommendation_realtime.h5')
 
 def get_user_recommendations(user_id,user_last_watched,user_last_rating, num_recommendations):
     all_movies = np.arange(NUM_MOVIES)    
@@ -12,4 +12,5 @@ def get_user_recommendations(user_id,user_last_watched,user_last_rating, num_rec
     top_movies = sorted_indices[:num_recommendations]
     return top_movies
 
-get_user_recommendations(1,1,3,5)
+movies = get_user_recommendations(1,1,3,5)
+print(movies)

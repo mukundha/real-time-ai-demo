@@ -12,4 +12,5 @@ def get_user_recommendations(user_id, num_recommendations):
     top_movies = sorted_indices[:num_recommendations]
     return top_movies
 
-get_user_recommendations(1,5)
+movies = get_user_recommendations(1,5)
+print(movies)

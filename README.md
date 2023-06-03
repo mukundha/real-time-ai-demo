@@ -39,7 +39,7 @@ Dataset recommended for educational purpose is already included here. If needed,
 
 Let's train a recommendation model with this dataset
 
-Feel free to review `train.py` on preprocessing required and the model desgin.
+Feel free to review `train.py` on preprocessing required and the model design.
 
 ```
 python train.py
@@ -84,9 +84,11 @@ Returns the Top5 movie recommendations for `userId` 1.
 
 Success!! While this is Great, let's talk about how this model could be improved. 
 
-This model uses only the ratings information captured when a user rates a movie for training and inference. What this means is, this model will produce the same output until its trained on new data.
+This model uses only the ratings information captured when a user rates a movie for training and inference. What this means is, 
 
-This also missed out on a lot of other actions a user could be doing, for eg, 
+1) The model will produce the same output until its trained on new data.
+
+2) This also misses out on a lot of other actions a user could be doing, for eg, 
 - browsing
 - checking out trailers
 - abandoning a movie midway
@@ -106,6 +108,7 @@ Feature engineering or feature extraction or feature discovery is the process of
 Notice the timestamp field in our initial dataset. We know when a user had watched a movie. We could use this information to engineer 2 new features
 
 `last_watched_movie` - movie watched by the user before watching `movie_id`
+
 `last_rating`  - movie rating provided to `last_watched_movie`
 
 Also remember, these values change over time. These features are usually referred to as `Real-time` features.
@@ -116,7 +119,7 @@ We could populate the new features to our dataset,
 |--|--|--|--|--|--|
 |1|1|4.0|2000-07-30 18:45:03|1023|5.0
 |1|3|4.0|2000-07-30 18:20:47|1777|4.0
-|1|6|4.0|2000-07-30 18:37:04,2000|4.0
+|1|6|4.0|2000-07-30 18:37:04|2000|4.0
 |1|47|5.0|2000-07-30 19:03:35|593|4.0
 
 
@@ -129,6 +132,7 @@ python train_realtime.py
 ```
 
 ```
+..
 Epoch 1/10
 1253/1253 [==============================] - 3s 2ms/step - loss: 0.0419
 Epoch 2/10
@@ -163,9 +167,11 @@ array([2224,  602,  908,  904, 1700])
 array([ 602, 9600, 2224,  277, 1700])
 ```
 
-Notice, everytime `Real-time` features changes, in other words, based on user activity, we are now able to generate a more contextual, relevant recommendations.
+Notice, everytime `Real-time` features changes, in other words, based on user activity, this model is able to generate a more contextual, relevant recommendations. 
 
-We have built our first `Real-time` AI model!
+This is a simple example. If we are able to capture the user activity in real-time, and use it for inference, we can deliver a contextual, relevant recommendations that will improve the overall user experience. 
+
+Congratulations!! We have built our first `Real-time` AI model!
 
 #### 
 

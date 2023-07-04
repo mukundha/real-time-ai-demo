@@ -173,6 +173,13 @@ This is a simple example. If we are able to capture the user activity in real-ti
 
 Congratulations!! We have built our first `Real-time` AI model!
 
+### Live Demo
+UI: https://movie-recommendations-demo.web.app/
+
+`Batch AI` button at the bottom right allows you to toggle between `Batch` and `Realtime` mode.
+
+[!Screenshot](./ss.png)
+
 #### 
 
 Citation

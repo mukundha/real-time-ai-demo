@@ -178,7 +178,7 @@ UI: https://movie-recommendations-demo.web.app/
 
 `Batch AI` button at the bottom right allows you to toggle between `Batch` and `Realtime` mode.
 
-[!Screenshot](./ss.png)
+![Screenshot](./ss.png)
 
 #### 
 
